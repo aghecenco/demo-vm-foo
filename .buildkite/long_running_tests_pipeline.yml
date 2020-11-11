@@ -1,0 +1,15 @@
+steps:
+  - label: "longrun-x86_64"
+    commands:
+      - python3 tests/long_running_tests.py
+    retry:
+      automatic: false
+    agents:
+      platform: x86_64.metal
+
+notify:
+  - webhook: "https://gjlq24jf46.execute-api.eu-west-1.amazonaws.com/default/demo-long-run-test-fail"
+    if: build.state == "passed"
+
+  - webhook: "https://gjlq24jf46.execute-api.eu-west-1.amazonaws.com/default/demo-long-run-test-fail"
+    if: build.state == "failed"
