@@ -9,4 +9,3 @@ steps:
 
 notify:
   - webhook: "https://gjlq24jf46.execute-api.eu-west-1.amazonaws.com/default/demo-long-run-test-fail"
-    message: "asdf"
