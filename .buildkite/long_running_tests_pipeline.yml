@@ -8,11 +8,5 @@ steps:
       platform: x86_64.metal
 
 notify:
-  - email: "aghecen@amazon.com"
-    if: build.state == "passed"
-
   - webhook: "https://gjlq24jf46.execute-api.eu-west-1.amazonaws.com/default/demo-long-run-test-fail"
-    if: build.state == "passed"
-
-  - webhook: "https://gjlq24jf46.execute-api.eu-west-1.amazonaws.com/default/demo-long-run-test-fail"
-    if: build.state == "failed"
+    message: "asdf"
