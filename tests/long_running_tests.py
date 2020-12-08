@@ -1,4 +1,4 @@
-PERF_DROP=3 # percentages; modify this to change the test behavior.
+PERF_DROP=0 # percentages; modify this to change the test behavior.
 
 THRESHOLD=2 # percentages
 
